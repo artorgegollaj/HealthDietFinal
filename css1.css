@@ -1,0 +1,69 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:  10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgba(255, 254, 250);
+    border-bottom: 1px solid rgb(191, 191, 191);
+}
+.logo img{
+    height: auto;
+    width: 160px;
+}
+.nav a{
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(98, 98, 98);
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:rgba(255, 254, 250);
+}
+.Login{
+    width: 350px;
+    margin: 50px auto;
+    background-color: rgba(255, 254, 250);
+    padding: 35px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid rgb(191, 191, 191);
+}
+.Login h2{
+    margin-bottom: 20px;
+}
+.apple,.facebook,.google{
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.apple img{
+    height: 20px;
+    width: 18px;
+}
+.facebook img{
+    height: 18px;
+    width: 18px;
+}
+.google img{
+    height: 18px;
+    width: 18px;
+}
+.apple{
+    background-color: black;
+}
+.facebook{
+    background-color: blue;
+}
+.google{
+    background-color: rgb(193, 4, 4);
+}
