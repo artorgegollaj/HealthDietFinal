@@ -5,7 +5,7 @@
     padding:  10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgba(255, 254, 250);
-    border-bottom: 1px solid rgb(191,191, 191);
+    
 }
 .logo img{
     height: auto;
@@ -63,10 +63,12 @@ body{
     border-radius: 20px;
 }
 .tit{
+   text-align: center;
     font-weight: bold;
     font-size: 20px;
 }
 .pershkrimi{
+    text-align: center;
     font-size: 16px;
     color: gray;
 }
@@ -96,4 +98,27 @@ body{
     font-weight: bold;
     color: white;
     transition: 0.3s;
+}
+@media screen and (max-width: 600px) {
+    .logo img {
+        width: 120px;
+    }
+
+    .nav a {
+        font-size: 16px;
+        margin: 3px 5px;
+    }
+
+    .wo {
+        padding: 15px;
+        min-height: auto; 
+    }
+
+    .tit {
+        font-size: 18px;
+    }
+
+    .pershkrimi {
+        font-size: 14px;
+    }
 }
