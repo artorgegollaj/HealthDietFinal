@@ -96,3 +96,47 @@ form input[type="email"]{
     color: white;
     transition: 0.3s;
 }
+@media screen and (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+    }
+
+    .nav {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .nav a {
+        display: block;
+        margin: 8px 0;
+        font-size: 16px;
+    }
+
+    .Signup {
+        width: 90%;
+        margin: 30px auto;
+        padding: 25px;
+    }
+
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="email"] {
+        width: 100%;
+    }
+
+    .remember {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footer {
+        height: auto;
+        text-align: center;
+    }
+
+    .links a {
+        display: block;
+        margin: 8px 0;
+    }
+}

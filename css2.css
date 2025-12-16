@@ -100,18 +100,36 @@ body{
     transition: 0.3s;
 }
 @media screen and (max-width: 600px) {
-    .logo img {
-        width: 120px;
+
+    .header {
+        flex-direction: column;
+    }
+
+    .nav {
+        text-align: center;
+        margin-top: 10px;
     }
 
     .nav a {
+        display: block;
         font-size: 16px;
-        margin: 3px 5px;
+        margin: 6px 0;
+    }
+
+    .kategorite p {
+        width: 90%;
     }
 
     .wo {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
         padding: 15px;
-        min-height: auto; 
+    }
+
+    .wo img {
+        width: 100%;
+        height: auto;
     }
 
     .tit {

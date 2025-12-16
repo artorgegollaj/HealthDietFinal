@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    background:url(background.png);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: url(bacground3.png);
 }
 .header{
     display: flex;
@@ -10,8 +10,12 @@ body {
     align-items: center;
     padding:  10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: rgb(255, 254, 250);
+    background-color: rgba(255, 254, 250);
     
+}
+.logo img{
+    height: auto;
+    width: 160px;
 }
 .nav a{
     text-decoration: none;
@@ -21,60 +25,64 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: rgb(0, 96, 181);
 }
-.logo img {
-    width: 160px;     
-    height: auto;
-    margin-bottom: 5px;
-}
+
 .pagecontainer {
     width: 80%;
-    max-width: 800px;
-    margin: 30px auto;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(204, 204, 204);
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 25px;
     border-radius: 8px;
-    padding: 20px;
+    border: 1px solid rgb(221, 221, 221);
 }
 
 .pagecontainer h1 {
     text-align: center;
     color: rgb(0, 96, 181);
-    margin-bottom: 10px;
 }
 
 .pageintro {
     text-align: center;
-    color: #666666;
-    margin-bottom: 20px;
+    color: rgb(85, 85, 85);
+    margin-bottom: 30px;
 }
 
-.program {
+.day {
+    margin-bottom: 35px;
+}
+
+.day h2 {
+    color: rgb(0, 96, 181);
+    border-bottom: 2px solid rgb(238, 238, 238);
+    padding-bottom: 5px;
+}
+.exercise {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    background-color: rgb(250, 250, 250);
     border: 1px solid rgb(221, 221, 221);
     border-radius: 6px;
-    background-color: rgb(250, 250, 250);
-    padding: 12px;
-    margin-bottom: 15px;
-    
-}
-.program a{
-    text-decoration: none;
-    color: rgb(0, 96, 181) ;
+    padding: 10px;
 }
 
-.program h2 {
+.exercise img {
+    width: 120px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 6px;
+}
+
+.exercise .text h3 {
+    margin: 0;
     color: rgb(0, 96, 181);
-    margin-bottom: 5px;
 }
 
-.program p {
-    margin-bottom: 8px;
+.exercise .text p {
+    margin: 4px 0;
+    color: rgb(68, 68, 68);
 }
-
-.program ul {
-    margin-left: 20px;
-}
-
-.footer{
+footer{
     margin: 0;
     width: 100%;
     height: 100px;
@@ -122,8 +130,14 @@ body {
         padding: 15px;
     }
 
-    .program {
-        padding: 10px;
+    .exercise {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .exercise img {
+        margin: 0 0 10px 0;
+        width: 140px;
     }
 
     .footer {
