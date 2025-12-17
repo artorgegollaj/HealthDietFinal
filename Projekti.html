@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health And Diet</title>
     <link rel="stylesheet" href="css1.css">
+    
 </head>
 <body>
     <header class="header">
@@ -18,12 +19,13 @@
         </nav>
     </header>
     <div class="Login">
-        
         <h1>Log In</h1>
         <p class="info">Please give your information to continue!</p>
-        <form>
-            <input type="text" id="username" placeholder="Username" required minlength="6">
-            <input type="password" id="password" placeholder="Password" required minlength="8">
+        <form id="login">
+            <input type="text" id="username" placeholder="Username" required >
+            <p id="usrError" style="color:red; font-size:14px;"></p>
+            <input type="password" id="password" placeholder="Password" required >
+            <p id="passError" style="color:red; font-size:14px;"></p>
             <div class="remember">
                 <div class="remember-left">
                     <input type="checkbox" id="rememberMe">
@@ -47,5 +49,6 @@
             </div>
         </div>
     </footer>
+    <script src="script1.js"></script>
 </body>
 </html>
