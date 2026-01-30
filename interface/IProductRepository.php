@@ -1,16 +1,15 @@
 <?php
 
-    interface IProductRepository{
-        public function insertProduct($product);
+interface IProductRepository {
+    public function insertProduct($product, $createdBy = null);
 
-        public function getAllProducts();
+    public function getAllProducts();
 
-        public function getProductById();
+    public function getProductById($id = null);
 
-        public function updateProduct($id,$name,$description,$quantity,$price);
+    public function updateProduct($id, $name, $description, $quantity, $price, $updatedBy = null);
 
-        public function deleteProduct($id);
-        
-    }
+    public function deleteProduct($id);
+}
 
 ?>

@@ -1,100 +1,72 @@
 <?php
+require_once __DIR__ . "/../Database.php";
 
-include_once '../interface/IProductRepository.php';
-include_once '../databaseConnection/Database.php';
-include_once '../model/Product.php';
 
-class ProductRepository implements IProductRepository
+class ProductRepository
 {
-    private $connection;
+    private $conn;
 
     public function __construct()
     {
-        $db = new Database();                
-        $this->connection = $db->startConnection();
-    }
-
-    public function insertProduct($product)
-    {
-        $conn = $this->connection;
-
-        $sql = "INSERT INTO product (name, description, quantity, price)
-                VALUES (:name, :description, :quantity, :price)";
-
-        $statement = $conn->prepare($sql);
-
-        $name = $product->getName();
-        $description = $product->getDescription();
-        $quantity = $product->getQuantity();
-        $price = $product->getPrice();
-
-        $statement->bindParam(':name', $name);
-        $statement->bindParam(':description', $description);
-        $statement->bindParam(':quantity', $quantity);
-        $statement->bindParam(':price', $price);
-
-        return $statement->execute();
+        $db = new Database();
+        $this->conn = $db->startConnection();
     }
 
     public function getAllProducts()
     {
-        $conn = $this->connection;
+        $sql = "SELECT p.*,
+                       u1.name AS created_by_name,
+                       u2.name AS updated_by_name
+                FROM products p
+                LEFT JOIN users u1 ON p.created_by = u1.id
+                LEFT JOIN users u2 ON p.updated_by = u2.id
+                ORDER BY p.id DESC";
 
-        $sql = "SELECT * FROM product ORDER BY id DESC";
-        $statement = $conn->prepare($sql);
-        $statement->execute();
-
-        return $statement->fetchAll();
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getProductById($id = null)
+    public function getProductById($id)
     {
-        if ($id === null) {
-            return null;
+        $sql = "SELECT * FROM products WHERE id = ? LIMIT 1";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([$id]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function insertProduct($title, $description, $price, $filePath, $fileType, $createdBy)
+    {
+        $sql = "INSERT INTO products (title, description, price, file_path, file_type, created_by)
+                VALUES (?, ?, ?, ?, ?, ?)";
+
+        $stmt = $this->conn->prepare($sql);
+        return $stmt->execute([$title, $description, $price, $filePath, $fileType, $createdBy]);
+    }
+
+    public function updateProduct($id, $title, $description, $price, $filePath, $fileType, $updatedBy)
+    {
+        // If no new file uploaded, don't overwrite file_path/file_type
+        if ($filePath === null && $fileType === null) {
+            $sql = "UPDATE products
+                    SET title = ?, description = ?, price = ?, updated_by = ?
+                    WHERE id = ?";
+            $stmt = $this->conn->prepare($sql);
+            return $stmt->execute([$title, $description, $price, $updatedBy, $id]);
         }
 
-        $conn = $this->connection;
+        $sql = "UPDATE products
+                SET title = ?, description = ?, price = ?, file_path = ?, file_type = ?, updated_by = ?
+                WHERE id = ?";
 
-        $sql = "SELECT * FROM product WHERE id = :id LIMIT 1";
-        $statement = $conn->prepare($sql);
-        $statement->bindParam(':id', $id);
-        $statement->execute();
-
-        return $statement->fetch();
-    }
-
-    public function updateProduct($id, $name, $description, $quantity, $price)
-    {
-        $conn = $this->connection;
-
-        $sql = "UPDATE product
-                SET name = :name,
-                    description = :description,
-                    quantity = :quantity,
-                    price = :price
-                WHERE id = :id";
-
-        $statement = $conn->prepare($sql);
-
-        $statement->bindParam(':id', $id);
-        $statement->bindParam(':name', $name);
-        $statement->bindParam(':description', $description);
-        $statement->bindParam(':quantity', $quantity);
-        $statement->bindParam(':price', $price);
-
-        return $statement->execute();
+        $stmt = $this->conn->prepare($sql);
+        return $stmt->execute([$title, $description, $price, $filePath, $fileType, $updatedBy, $id]);
     }
 
     public function deleteProduct($id)
     {
-        $conn = $this->connection;
-
-        $sql = "DELETE FROM product WHERE id = :id";
-        $statement = $conn->prepare($sql);
-        $statement->bindParam(':id', $id);
-
-        return $statement->execute();
+        $sql = "DELETE FROM products WHERE id = ?";
+        $stmt = $this->conn->prepare($sql);
+        return $stmt->execute([$id]);
     }
 }
-
-?>

@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt = $conn->prepare($sql);
         $stmt->execute([$name . " " . $lastname, $email, $password]);
 
-        header("Location: login.php");
+        header("Location: Projekti.php");
         exit;
 
     } catch (PDOException $e) {
