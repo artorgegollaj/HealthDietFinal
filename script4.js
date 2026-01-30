@@ -79,6 +79,7 @@ document.getElementById("signup").addEventListener("submit",function(e){
 
     if (isValid) {
         alert("SignUp successful!");
+        this.submit();
     }
 
 })

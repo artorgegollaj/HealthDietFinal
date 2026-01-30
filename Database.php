@@ -2,7 +2,7 @@
 
 class Database{
     private $server ="localhost";
-    private $dbname="ProductDatabase";
+    private $dbname="productdatabase";
     private $username="root";
     private $password="";
 

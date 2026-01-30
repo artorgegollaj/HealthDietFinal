@@ -21,20 +21,20 @@
         
         <h1>Sign Up</h1>
         <p class="info">Please give your information to continue!</p>
-        <form id="signup">
-            <input type="text" id="name" placeholder="First Name" >
+        <form id="signup" method="POST" action="signup.php">
+            <input type="text" id="name" name="name"  placeholder="First Name" >
             <p id="nameError" style="color:red; font-size:14px;"></p>
-            <input type="text" id="lastname" placeholder="Last Name" >
+            <input type="text" id="lastname" name="lastname" placeholder="Last Name" >
             <p id="lastNameError" style="color:red; font-size:14px;"></p>
-            <input type="text" id="height" placeholder="Height" >
+            <input type="text" id="height"  name="height" placeholder="Height" >
             <p id="heightError" style="color:red; font-size:14px;"></p>
-            <input type="text" id="weight" placeholder="Weight" >
+            <input type="text" id="weight" name="weight" placeholder="Weight" >
             <p id="weightError" style="color:red; font-size:14px;"></p>
-            <input type="email" id="email" placeholder="Email">
+            <input type="email" id="email" name="email" placeholder="Email">
             <p id="emailError" style="color:red; font-size:14px;"></p>
-            <input type="password" id="password" placeholder="Password">
+            <input type="password" id="password" name="password" placeholder="Password">
             <p id="passError" style="color:red; font-size:14px;"></p>
-            <input type="password" id="confirmpassword" placeholder="Confirm Password">
+            <input type="password" id="confirmpassword"  name="confirmpassword" placeholder="Confirm Password">
             <p id="cpassError" style="color:red; font-size:14px;"></p>
             <div class="remember">
                     <input type="checkbox" id="rememberMe">
