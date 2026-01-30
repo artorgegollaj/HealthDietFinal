@@ -35,7 +35,7 @@ function saveUploadedFile($file)
         return [false, false];
     }
 
-    // Save in HealthDietFinal/uploads (NOT view/uploads)
+   
     $uploadDir = dirname(__DIR__) . "/uploads/";
     if (!is_dir($uploadDir)) {
         mkdir($uploadDir, 0777, true);
@@ -48,7 +48,6 @@ function saveUploadedFile($file)
         return [false, false];
     }
 
-    // Path stored in DB (relative to project root)
     $relativePath = "uploads/" . $filename;
 
     return [$relativePath, $type];

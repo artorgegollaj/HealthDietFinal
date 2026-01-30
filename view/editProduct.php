@@ -29,7 +29,7 @@ $error = "";
 function saveUploadedFile($file)
 {
     if (!isset($file) || $file["error"] !== UPLOAD_ERR_OK) {
-        return [null, null]; // no upload
+        return [null, null]; 
     }
 
     $allowedImage = ["image/jpeg", "image/png", "image/webp"];
