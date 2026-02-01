@@ -35,6 +35,8 @@ class product
     function getPrice(){
         return $this->price;
     }
+
+    
 }
 
 ?>

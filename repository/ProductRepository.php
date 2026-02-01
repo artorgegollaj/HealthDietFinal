@@ -46,7 +46,6 @@ class ProductRepository
 
     public function updateProduct($id, $title, $description, $price, $filePath, $fileType, $updatedBy)
     {
-        // If no new file uploaded, don't overwrite file_path/file_type
         if ($filePath === null && $fileType === null) {
             $sql = "UPDATE products
                     SET title = ?, description = ?, price = ?, updated_by = ?
