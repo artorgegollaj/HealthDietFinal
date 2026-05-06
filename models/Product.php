@@ -1,42 +1,34 @@
 <?php
 
-class product
+class Product
 {
     private $id;
-    private $name;
+    private $title;
     private $description;
-    private $quantity;
     private $price;
+    private $filePath;
+    private $fileType;
+    private $createdBy;
+    private $updatedBy;
 
-    function __construct($id,$name,$description,$quantity,$price){
-        $this->id=$id;
-        $this->name=$name;
-        $this->description=$description;
-        $this->quantity=$quantity;
-        $this->price=$price;
+    public function __construct($id, $title, $description, $price, $filePath = null, $fileType = null, $createdBy = null, $updatedBy = null)
+    {
+        $this->id = $id;
+        $this->title = $title;
+        $this->description = $description;
+        $this->price = $price;
+        $this->filePath = $filePath;
+        $this->fileType = $fileType;
+        $this->createdBy = $createdBy;
+        $this->updatedBy = $updatedBy;
     }
 
-    function getId(){
-        return $this->id;
-    }
-
-    function getName(){
-        return $this->name;
-    }
-
-    function getDescription(){
-        return $this->description;
-    }
-
-    function getQuantity(){
-        return $this->quantity;
-    }
-
-    function getPrice(){
-        return $this->price;
-    }
-
-    
+    public function getId() { return $this->id; }
+    public function getTitle() { return $this->title; }
+    public function getDescription() { return $this->description; }
+    public function getPrice() { return $this->price; }
+    public function getFilePath() { return $this->filePath; }
+    public function getFileType() { return $this->fileType; }
+    public function getCreatedBy() { return $this->createdBy; }
+    public function getUpdatedBy() { return $this->updatedBy; }
 }
-
-?>

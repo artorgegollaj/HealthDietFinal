@@ -5,15 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Full Body Workout Program</title>
-    <link rel="stylesheet" href="faqja5.css">
+    <link rel="stylesheet" href="assets/css/program-detail.css">
 </head>
 <body>
 
      <header class="header">
-        <div class="logo"><img src="Logo1.png" alt="logo"></div>
+        <div class="logo"><img src="assets/images/Logo1.png" alt="logo"></div>
         <nav class="nav">
-            <a href="Projektifq2.html">Workouts</a>
-            <a href="faqja3.html">Programs</a>
+            <a href="Projektifq2.php">Workouts</a>
+            <a href="faqja3.php">Programs</a>
             <a href="#">Healthy Living</a>
             <a href="#">About</a>
             <a href="#">Membership</a>
@@ -30,7 +30,7 @@
             <h2>Upper Body</h2>
 
             <div class="exercise">
-                <img src="liegestuetze.webp" alt="Push Ups">
+                <img src="assets/images/liegestuetze.webp" alt="Push Ups">
                 <div class="text">
                     <h3>Push-Ups</h3>
                     <p>3 sets × 10–12 reps</p>
@@ -39,7 +39,7 @@
             </div>
 
             <div class="exercise">
-                <img src="bent-over-row-dumbbell-fly-exercise-dumbbell.jpg" alt="Dumbbell Row">
+                <img src="assets/images/bent-over-row-dumbbell-fly-exercise-dumbbell.jpg" alt="Dumbbell Row">
                 <div class="text">
                     <h3>Dumbbell Rows</h3>
                     <p>3 sets × 10 reps</p>
@@ -51,7 +51,7 @@
             <h2>Lower Body</h2>
 
             <div class="exercise">
-                <img src="images.jfif" alt="Squats">
+                <img src="assets/images/images.jfif" alt="Squats">
                 <div class="text">
                     <h3>Squats</h3>
                     <p>3 sets × 12 reps</p>
@@ -60,7 +60,7 @@
             </div>
 
             <div class="exercise">
-                <img src="Lunges-movment_d958998d-2a9f-430e-bdea-06f1e2bcc835_600x.webp" alt="Lunges">
+                <img src="assets/images/Lunges-movment_d958998d-2a9f-430e-bdea-06f1e2bcc835_600x.webp" alt="Lunges">
                 <div class="text">
                     <h3>Lunges</h3>
                     <p>3 sets × 10 reps each leg</p>
@@ -72,7 +72,7 @@
             <h2>Full Body</h2>
 
             <div class="exercise">
-                <img src="826b.png" alt="Plank">
+                <img src="assets/images/826b.png" alt="Plank">
                 <div class="text">
                     <h3>Plank</h3>
                     <p>3 sets × 30–45 seconds</p>
@@ -81,7 +81,7 @@
             </div>
 
             <div class="exercise">
-                <img src="jumping-jack.webp" alt="Jumping Jacks">
+                <img src="assets/images/jumping-jack.webp" alt="Jumping Jacks">
                 <div class="text">
                     <h3>Jumping Jacks</h3>
                     <p>3 sets × 30 reps</p>

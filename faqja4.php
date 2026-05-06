@@ -5,15 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faqja4</title>
-    <link rel="stylesheet" href="css4.css">
+    <title>Sign Up - Health And Diet</title>
+    <link rel="stylesheet" href="assets/css/signup.css">
 </head>
 <body>
 <header class="header">
-    <div class="logo"><img src="Logo1.png" alt="logo"></div>
+    <div class="logo"><img src="assets/images/Logo1.png" alt="logo"></div>
     <nav class="nav">
-        <a href="Projektifq2.html">Workouts</a>
-        <a href="faqja3.html">Programs</a>
+        <a href="Projektifq2.php">Workouts</a>
+        <a href="faqja3.php">Programs</a>
         <a href="#">Healthy Living</a>
         <a href="#">About</a>
         <a href="#">Membership</a>
@@ -66,6 +66,6 @@
     </div>
 </footer>
 
-<script src="script4.js"></script>
+<script src="assets/js/signup.js"></script>
 </body>
 </html>

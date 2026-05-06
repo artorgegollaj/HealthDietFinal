@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . "/../Database.php";
+require_once __DIR__ . "/../interface/IProductRepository.php";
 
-
-class ProductRepository
+class ProductRepository implements IProductRepository
 {
     private $conn;
 

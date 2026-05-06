@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programs</title>
-    <link rel="stylesheet" href="css3.css">
+    <link rel="stylesheet" href="assets/css/programs.css">
 </head>
 <body>
     <header class="header">
-        <div class="logo"><img src="Logo1.png" alt="logo"></div>
+        <div class="logo"><img src="assets/images/Logo1.png" alt="logo"></div>
         <nav class="nav">
-            <a href="Projektifq2.html">Workouts</a>
-            <a href="faqja3.html">Programs</a>
+            <a href="Projektifq2.php">Workouts</a>
+            <a href="faqja3.php">Programs</a>
             <a href="#">Healthy Living</a>
             <a href="#">About</a>
             <a href="#">Membership</a>
@@ -28,7 +28,7 @@
         </p>
 
         <div class="program">
-            <h2><a href="faqja5.html">Full Body Workout</a></h2>
+            <h2><a href="faqja5.php">Full Body Workout</a></h2>
             <p>3 days per week, simple exercises for the whole body.</p>
             <ul>
                 <li>Day 1: Upper body</li>

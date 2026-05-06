@@ -57,12 +57,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health And Diet</title>
-    <link rel="stylesheet" href="css1.css">
+    <link rel="stylesheet" href="assets/css/login.css">
 </head>
 <body>
 
 <header class="header">
-    <div class="logo"><img src="Logo1.png" alt="logo"></div>
+    <div class="logo"><img src="assets/images/Logo1.png" alt="logo"></div>
     <nav class="nav">
         <a href="Projektifq2.php">Workouts</a>
         <a href="faqja3.php">Programs</a>
@@ -115,6 +115,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </div>
 </footer>
 
-<script src="script1.js"></script>
+<script src="assets/js/login.js"></script>
 </body>
 </html>
